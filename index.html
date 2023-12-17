@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/output.css" rel="stylesheet"> 
+    <title>Image To Text Converter</title>
+</head>
+<body>
+    <section id="main_container h-screen">
+        <section id="container_wrapper">
+            <section id="header_section">
+                <header class='flex justify-between p-6'>
+                    <div class="left">
+                        <div class="logo_div">
+                            <a href="">
+                                <img class="w-24" src="src/assets/icons/image-to-text.jpg" alt="logo_icon">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right flex">
+                        <ul class="flex items-center gap-6">
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+                            <li>
+                                <a href="">About</a>
+                            </li>
+                            <li>
+                                <a href="">Products</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+            </section>
+            <section id="spotlight_section p-2">
+                <div class="flex p-9 items-center max-sm:flex-col max-sm:items-center">
+                    <div id="drop_zone" class="left w-1/6 border-dashed border-2 border-black max-sm:w-full">
+                        <div id="img-preview">
+                            <img src="src/assets/images/drag-and-drop.svg" alt="drag and drop">
+                        </div>
+                        <div hidden>
+                            <input type="file" name="image_file" id="image_file_uploader_input">
+                        </div>
+                    </div>
+                    <div class="right w-5/6 ml-9 h-full max-sm:w-full max-sm:ml-0">
+                        <div class="bottom flex flex-col justify-between bg-gray-500 p-10">
+                            <div class="top max-sm:h-28">
+                                <p id="translated_text" class="overflow-y-scroll max-sm:h-28 h-96">
+                                </p>
+                            </div>
+                            <div class="bottom mt-10">
+                                <div class="buttons_div flex gap-3">
+                                    <button id="copy_button" class="flex items-center gap-3 p-2 bg-teal-50 rounded-md max-sm:p-1">
+                                        <p>Copy</p>
+                                        <div class="">
+                                            <img class="w-4" src="src/assets/icons/copy.png" alt="copy_icon">
+                                        </div>
+                                    </button>
+                                    <button disabled class="download_button flex items-center gap-3 p-2 bg-green-400 rounded-md max-sm:p-1 cursor-not-allowed">
+                                        <p>Download</p>
+                                        <div>
+                                            <img class="w-4" src="src/assets/icons/downloads.png" alt="download_icon">
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/AmagiTech/JSLoader/amagiloader.js"></script>
+    <script type="module" src="src/js/script.js"></script>
+</body>
+</html>
