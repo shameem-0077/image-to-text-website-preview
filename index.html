@@ -7,7 +7,7 @@
     <title>Image To Text Converter</title>
 </head>
 <body>
-    <section id="main_container h-screen">
+    <section id="main_container">
         <section id="container_wrapper">
             <section id="header_section">
                 <header class='flex justify-between p-6'>
@@ -34,9 +34,18 @@
                 </header>
             </section>
             <section id="spotlight_section p-2">
+                <div class="select_lan flex justify-center">
+                    <div>
+                        <select name="lang_select_option" id="language_select_option" class="p-2 rounded-md">
+                            <option value="eng">English</option>
+                            <option value="mal">Malayalam</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="flex p-9 items-center max-sm:flex-col max-sm:items-center">
-                    <div id="drop_zone" class="left w-1/6 border-dashed border-2 border-black max-sm:w-full">
+                    <div id="drop_zone" class="left w-1/6 border-dashed border-2 border-black max-sm:w-full cursor-pointer">
                         <div id="img-preview">
+                            <p class="text-center">Upload image</p>
                             <img src="src/assets/images/drag-and-drop.svg" alt="drag and drop">
                         </div>
                         <div hidden>
